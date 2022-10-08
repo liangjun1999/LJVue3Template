@@ -13,6 +13,7 @@
   "dependencies": {
     "@typescript-eslint/parser": "^5.37.0",
     "axios": "^0.27.2",
+    "mitt": "^3.0.0",
     "pinia": "^2.0.22",
     "vue": "^3.2.37",
     "vue-axios": "^3.4.1",

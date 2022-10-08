@@ -1,7 +1,9 @@
 <!-- <script setup> 中的代码会在每次组件实例被创建的时候执行。 -->
 <script setup lang="ts">
-import { ref, reactive, toRef, onMounted } from 'vue';
+import { ref, reactive, toRef, onMounted, onBeforeUnmount } from 'vue';
 import ljRequest from '../../request';
+import bus from '@/libs/bus';
+import Toast from '@/libs/Toast';
 interface Props {
   msg?: string;
   labels?: string[];
@@ -26,13 +28,24 @@ const doRequest = () => {
     })
     .then((res) => {
       console.log(res);
+    })
+    .finally(() => {
+      bus.emit('requestOk', {
+        ok: true,
+      });
     });
 };
 
 const color = toRef(data, 'color');
-
+const requestOk = (params: any) => {
+  Toast(JSON.stringify(params));
+};
 onMounted(() => {
+  bus.on('requestOk', requestOk);
   doRequest();
+});
+onBeforeUnmount(() => {
+  bus.off('requestOk', requestOk);
 });
 </script>
 
