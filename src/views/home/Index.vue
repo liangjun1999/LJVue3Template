@@ -38,6 +38,8 @@ onMounted(() => {
 
 <template>
   <div>home{{ count }}</div>
+  <svg-icon name="like"> </svg-icon>
+  <svg-icon name="unLike"> </svg-icon>
 </template>
 
 <style lang="scss" scoped></style>

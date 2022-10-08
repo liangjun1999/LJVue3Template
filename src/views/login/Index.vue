@@ -1,6 +1,7 @@
 <!-- <script setup> 中的代码会在每次组件实例被创建的时候执行。 -->
 <script setup lang="ts">
 import { ref, reactive, toRef } from 'vue';
+import HelloWorld from '@/components/HelloWorld.vue';
 interface Props {
   msg?: string;
   labels?: string[];
@@ -23,6 +24,7 @@ const color = toRef(data, 'color');
 
 <template>
   <div>login{{ count }}</div>
+  <HelloWorld msg="来自登录页" />
 </template>
 
 <style lang="scss" scoped></style>
