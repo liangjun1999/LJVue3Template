@@ -18,7 +18,7 @@
 
 ## 使用方法
 ```shell
-npx degit liangjun1999/LJVue3Template#master 项目名称
+npx degit plas007/LJVue3Template#master 项目名称
 cd 项目名称
 npm install
 npm run serve
