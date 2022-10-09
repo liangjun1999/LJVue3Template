@@ -15,3 +15,11 @@
 9. eslint
 10. prettier
 11. svg-icon
+
+## 使用方法
+```shell
+npx degit liangjun1999/LJVue3Template#master 项目名称
+cd 项目名称
+npm install
+npm run serve
+```
