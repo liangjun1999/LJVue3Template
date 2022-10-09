@@ -21,5 +21,5 @@
 npx degit plas007/LJVue3Template#master 项目名称
 cd 项目名称
 npm install
-npm run serve
+npm run dev
 ```
